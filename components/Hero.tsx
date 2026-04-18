@@ -1,7 +1,7 @@
 // components/Hero.tsx
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 
 const containerVariants = {
   hidden: {},
@@ -24,7 +24,15 @@ const lineVariants = {
   },
 };
 
+const lineVariantsReduced = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { duration: 0.01 } },
+};
+
 export default function Hero() {
+  const shouldReduce = useReducedMotion();
+  const activeLineVariants = shouldReduce ? lineVariantsReduced : lineVariants;
+
   return (
     <section className="px-6 pt-24 pb-16 max-w-5xl mx-auto">
       <motion.div
@@ -33,7 +41,7 @@ export default function Hero() {
         animate="visible"
       >
         <motion.h1
-          variants={lineVariants}
+          variants={activeLineVariants}
           style={{
             fontFamily: "var(--font-serif), Georgia, serif",
             fontSize: "clamp(3rem, 8vw, 6rem)",
@@ -47,7 +55,7 @@ export default function Hero() {
         </motion.h1>
 
         <motion.p
-          variants={lineVariants}
+          variants={activeLineVariants}
           style={{
             fontSize: "clamp(1.1rem, 2vw, 1.375rem)",
             fontWeight: 300,
@@ -61,7 +69,7 @@ export default function Hero() {
         </motion.p>
 
         <motion.p
-          variants={lineVariants}
+          variants={activeLineVariants}
           style={{
             fontSize: "1rem",
             color: "var(--ink-muted)",

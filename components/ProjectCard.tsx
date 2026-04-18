@@ -1,7 +1,7 @@
 // components/ProjectCard.tsx
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import type { Project } from "@/lib/projects";
 
 export const cardVariants = {
@@ -11,9 +11,14 @@ export const cardVariants = {
     y: 0,
     transition: {
       duration: 0.5,
-      ease: [0.19, 1, 0.22, 1] as const, // --ease-out-expo
+      ease: [0.19, 1, 0.22, 1] as const,
     },
   },
+};
+
+export const cardVariantsReduced = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { duration: 0.01 } },
 };
 
 export default function ProjectCard({
@@ -23,13 +28,17 @@ export default function ProjectCard({
   tags,
   href,
 }: Project) {
+  const shouldReduce = useReducedMotion();
+
   return (
     <motion.article
-      variants={cardVariants}
-      whileHover={{
-        y: -6,
-        transition: { duration: 0.24, ease: [0.645, 0.045, 0.355, 1] },
-      }}
+      variants={shouldReduce ? cardVariantsReduced : cardVariants}
+      whileHover={
+        shouldReduce
+          ? undefined
+          : { y: -6, transition: { duration: 0.24, ease: [0.645, 0.045, 0.355, 1] } }
+      }
+      aria-labelledby={`project-title-${title.replace(/\s+/g, "-").toLowerCase()}`}
       style={{
         backgroundColor: "var(--bg-card)",
         border: "1.5px solid var(--border)",
@@ -57,6 +66,7 @@ export default function ProjectCard({
 
       {/* Title */}
       <h2
+        id={`project-title-${title.replace(/\s+/g, "-").toLowerCase()}`}
         style={{
           fontFamily: "var(--font-serif), Georgia, serif",
           fontSize: "1.5rem",
@@ -107,10 +117,11 @@ export default function ProjectCard({
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        whileTap={{
-          scale: 0.97,
-          transition: { duration: 0.12, ease: [0.25, 0.46, 0.45, 0.94] },
-        }}
+        whileTap={
+          shouldReduce
+            ? undefined
+            : { scale: 0.97, transition: { duration: 0.12, ease: [0.25, 0.46, 0.45, 0.94] } }
+        }
         style={{
           display: "block",
           width: "100%",

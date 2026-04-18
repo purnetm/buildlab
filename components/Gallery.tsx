@@ -3,7 +3,7 @@
 
 import { motion } from "framer-motion";
 import { projects } from "@/lib/projects";
-import ProjectCard, { cardVariants } from "./ProjectCard";
+import ProjectCard from "./ProjectCard";
 
 const galleryVariants = {
   hidden: {},

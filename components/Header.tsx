@@ -21,6 +21,7 @@ export default function Header() {
         Purnet M.
       </a>
       <span
+        aria-hidden="true"
         style={{
           color: "var(--ink-muted)",
           fontSize: "0.8125rem",
