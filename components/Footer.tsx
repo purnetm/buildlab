@@ -50,7 +50,7 @@ const socialLinks = [
   },
   {
     label: "LinkedIn",
-    href: "https://linkedin.com/in/purnetmoirangthem",
+    href: "https://www.linkedin.com/in/purnet-moirangthem-460a63b3/",
     Icon: Linkedin,
   },
 ];

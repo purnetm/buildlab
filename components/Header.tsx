@@ -18,7 +18,7 @@ export default function Header() {
         }}
         className="hover:opacity-70 transition-opacity duration-150"
       >
-        Purnet M.
+        Purnet Moirangthem
       </a>
       <span
         aria-hidden="true"
@@ -30,7 +30,7 @@ export default function Header() {
           textTransform: "uppercase",
         }}
       >
-        Build Lab
+        All Projects
       </span>
     </header>
   );

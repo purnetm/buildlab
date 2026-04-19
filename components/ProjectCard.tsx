@@ -41,9 +41,9 @@ export default function ProjectCard({
       aria-labelledby={`project-title-${title.replace(/\s+/g, "-").toLowerCase()}`}
       style={{
         backgroundColor: "var(--bg-card)",
-        border: "1.5px solid var(--border)",
+        border: "1px solid var(--border)",
         borderRadius: "var(--radius-card)",
-        padding: "2rem",
+        padding: "33px",
         display: "flex",
         flexDirection: "column",
         gap: "1rem",
@@ -87,6 +87,7 @@ export default function ProjectCard({
           color: "var(--ink-muted)",
           flexGrow: 1,
           margin: 0,
+          paddingBottom: "2.5rem",
         }}
       >
         {description}

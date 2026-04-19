@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { DM_Serif_Display, DM_Sans } from "next/font/google";
+import Script from "next/script";
 import Providers from "@/components/Providers";
 import "./globals.css";
 
@@ -35,6 +36,8 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body suppressHydrationWarning>
+        {/* figma-capture */}
+        <Script src="https://mcp.figma.com/mcp/html-to-design/capture.js" strategy="afterInteractive" />
         <Providers>{children}</Providers>
       </body>
     </html>

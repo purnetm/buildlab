@@ -34,7 +34,7 @@ export default function Hero() {
   const activeLineVariants = shouldReduce ? lineVariantsReduced : lineVariants;
 
   return (
-    <section className="px-6 pt-24 pb-16 max-w-5xl mx-auto">
+    <section className="px-20 pt-24 pb-16 w-full">
       <motion.div
         variants={containerVariants}
         initial="hidden"
@@ -48,7 +48,7 @@ export default function Hero() {
             lineHeight: 1.05,
             letterSpacing: "-0.03em",
             color: "var(--ink)",
-            marginBottom: "1rem",
+            marginBottom: "0.875rem",
           }}
         >
           Build Lab
@@ -60,7 +60,7 @@ export default function Hero() {
             fontSize: "clamp(1.1rem, 2vw, 1.375rem)",
             fontWeight: 300,
             color: "var(--ink)",
-            marginBottom: "0.75rem",
+            marginBottom: "0.875rem",
             maxWidth: "36ch",
             lineHeight: 1.4,
           }}
@@ -77,8 +77,8 @@ export default function Hero() {
             lineHeight: 1.6,
           }}
         >
-          Projects built with Claude Code, Figma MCP, and strategic design
-          thinking.
+          From idea to working product — using AI to move faster and think
+          deeper.
         </motion.p>
       </motion.div>
     </section>

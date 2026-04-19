@@ -12,24 +12,24 @@ export const projects: Project[] = [
     title: "Spendsmart",
     subtitle: "Financial Advisor Powered by Claude",
     description:
-      "Real Claude API integration for personalized financial insights. Users get spending analysis, subscription optimization, and BNPL health checks — all powered by Claude's understanding of their financial data.",
-    tags: ["NextJS", "Claude-API", "FinTech"],
-    href: "https://github.com/purnetm/Spendsmart",
-  },
-  {
-    title: "Post Call Analysis",
-    subtitle: "No-Code Dashboard Builder",
-    description:
-      "Built entirely with Claude Code + Figma MCP. Users build custom dashboards with any metrics they choose. Shows how AI can enable non-technical users to create sophisticated analytics tools.",
-    tags: ["Claude-Code", "Figma-MCP", "NoCode"],
-    href: "https://github.com/purnetm/PostCallAnalysis",
+      "Spendsmart is a financial advisor that uses real data to generate personalized insights. It helps users understand spending patterns, optimize subscriptions, and make better financial decisions. Built to explore how AI can move from mock responses to real, usable guidance.",
+    tags: ["Personalization", "Claude-API", "FinTech"],
+    href: "https://spendsmart-purnetbuilds.vercel.app",
   },
   {
     title: "Calora",
     subtitle: "E-commerce with AI Recommendations",
     description:
-      "Gourmet dessert e-commerce platform with AI-powered recommendations, smart search, and personalized product suggestions. Shows how to add intelligence to existing products without losing UX quality.",
-    tags: ["Claude-API", "E-commerce", "Recommendations"],
-    href: "https://github.com/purnetm/Calora",
+      "Calora is a dessert e-commerce experience with smart recommendations and search. It personalizes product discovery while keeping the experience simple and intuitive. Built to explore how AI can enhance discovery without overwhelming users.",
+    tags: ["AI", "E-commerce", "Discovery"],
+    href: "https://calora-git-editorial-purnetbuilds.vercel.app",
+  },
+  {
+    title: "Post Call Analysis",
+    subtitle: "No-Code Dashboard Builder",
+    description:
+      "Post Call Analysis enables users to build custom dashboards for call insights without writing code. It supports flexible metrics, layouts, and data views based on user needs. Built to explore how AI can make analytics tools more accessible and user-driven.",
+    tags: ["Claude-Code", "Figma-MCP", "Analytics"],
+    href: "https://data-studio-pca-git-iterations-a-purnetbuilds.vercel.app",
   },
 ];
